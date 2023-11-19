@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số chẵn trong mảng</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    function demSoChan(arr) {
+        var dem = 0;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 0) {
+                dem++;
+            }
+        }
+        return dem;
+    }
+    var mang = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    var soLuongChan = demSoChan(mang);
+    document.getElementById("result").innerHTML = "Số lượng số chẵn trong mảng là: " + soLuongChan;
+</script>
+</body>
+</html>

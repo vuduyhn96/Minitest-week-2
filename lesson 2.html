@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Đếm phần tử trong mảng</title>
+</head>
+<body>
+<label for="valueA">Nhập giá trị a:</label>
+<input type="text" id="valueA">
+<button onclick="demPhanTu()">Đếm</button>
+<p id="ketQua"></p>
+<script>
+  function demPhanTu() {
+    let giaTriA = document.getElementById("valueA").value;
+    let mang = [1, 2, 3, 4, 5, 1, 6, 7, 8, 1, 9, 10];
+    let ketQua = 0;
+    for (let i = 0; i < mang.length; i++) {
+      if (mang[i] == giaTriA) {
+        ketQua++;
+      }
+    }
+    document.getElementById("ketQua").innerHTML = "Số lượng phần tử bằng giá trị a là: " + ketQua;
+  }
+</script>
+</body>
+</html>

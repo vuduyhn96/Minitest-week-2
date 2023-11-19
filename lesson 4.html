@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tổng số nguyên tố nhỏ hơn 500</title>
+</head>
+<body>
+<p id="ketQua"></p>
+<script>
+  function tinhTongSoNguyenTo() {
+    let tong = 0;
+    for (let i = 2; i < 500; i++) {
+      let laNguyenTo = true;
+      if (i < 2) {
+        laNguyenTo = false;
+      } else {
+        for (let j = 2; j * j <= i; j++) {
+          if (i % j === 0) {
+            laNguyenTo = false;
+            break;
+          }
+        }
+      }
+      if (laNguyenTo) {
+        tong += i;
+      }
+    }
+    document.getElementById("ketQua").innerText = "Tổng số nguyên tố nhỏ hơn 500 là: " + tong;
+  }
+  tinhTongSoNguyenTo();
+</script>
+</body>
+</html>
